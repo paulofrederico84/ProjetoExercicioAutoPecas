@@ -11,33 +11,38 @@ namespace ProjetoExercicioAutoPecas.Serviço
 {
     public class PessoaService : IPessoaService
     {
+        private readonly PessoaRepositorio _pessoaRepositorio;
+        public PessoaService(PessoaRepositorio pessoaRepositorio)
+        {
+            _pessoaRepositorio = pessoaRepositorio;
+        }
         public string CadastrarPessoa(Pessoa pessoa)
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.RegistrarPessoa(pessoa);
         }
         public Pessoa ConsultarPorCpf(string cpf)
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.BuscarPessoaPeloCPF(cpf);
         }
         public Pessoa ConsultarPorNome(string nome)
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.BuscarPessoaPeloNome(nome);
         }
         public Pessoa ConsultarPorTelefone(string telefone)
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.BuscarPessoaPeloTelefone(telefone);
         }
         public Pessoa ConsultarPorCidade(string cidade)
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.BuscarPessoaPorCidade(cidade);
         }
         public List<Pessoa> ListarTodas()
         {
-            throw new NotImplementedException();
+            return _pessoaRepositorio.BuscarTodas();
         }
         public void ExcluirPessoa(string cpf)
         {
-            throw new NotImplementedException();
-        }    
+            _pessoaRepositorio.RemoverPessoa(cpf);
+        }
     }
 }

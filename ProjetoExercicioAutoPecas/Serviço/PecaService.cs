@@ -11,33 +11,38 @@ namespace ProjetoExercicioAutoPecas.Serviço
 {
     public class PecaService : IPecaService
     {
+        private readonly PecaRepositorio _pecaRepositorio;
+        public PecaService(PecaRepositorio pecaRepositorio)
+        {
+            _pecaRepositorio = pecaRepositorio;
+        }
         public string CadastrarPeca(Peca peca)
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.RegistrarPeca(peca);
         }
         public Peca ConsultarPorCodigo(string codigo)
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.BuscarPecaPeloCodigo(codigo);
         }
         public Peca ConsultarPorDescricao(string descricao)
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.BuscarPecaPelaDescricao(descricao);
         }
         public Peca ConsultarPorFabricante(string fabricante)
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.BuscarPecaPeloFabricante(fabricante);
         }
         public List<Peca> ListarTodas()
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.BuscarTodas();
         }
         public List<Peca> ListarEmEstoque()
         {
-            throw new NotImplementedException();
+            return _pecaRepositorio.BuscarPecasEmEstoque();
         }
         public void ExcluirPeca(string codigo)
         {
-            throw new NotImplementedException();
-        }   
+            _pecaRepositorio.RemoverPeca(codigo);
+        }
     }
 }

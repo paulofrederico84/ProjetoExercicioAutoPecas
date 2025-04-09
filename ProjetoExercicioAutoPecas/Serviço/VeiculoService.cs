@@ -11,25 +11,46 @@ namespace ProjetoExercicioAutoPecas.Serviço
 {
     public class VeiculoService : IVeiculoService
     {
-        public Guid RegistrarVeiculo(Veiculo veiculo)
+        private readonly VeiculoRepositorio _veiculoRepositorio;
+        public VeiculoService(VeiculoRepositorio veiculoRepositorio)
         {
-            throw new NotImplementedException();
+            _veiculoRepositorio = veiculoRepositorio;
         }
-        public Veiculo BuscarVeiculoPorMarca(string marca)
+        public Guid CadastrarVeiculo(Veiculo veiculo)
         {
-            throw new NotImplementedException();
+            return _veiculoRepositorio.RegistrarVeiculo(veiculo);
         }
-        public Veiculo BuscarVeiculoPorModelo(string modelo)
-        {
-            throw new NotImplementedException();
-        }
+
         public List<Veiculo> BuscarTodos()
         {
-            throw new NotImplementedException();
+            return _veiculoRepositorio.BuscarTodos();
         }
+
+        public Veiculo BuscarVeiculoPorMarca(string marca)
+        {
+            return _veiculoRepositorio.BuscarVeiculoPorMarca(marca);
+        }
+
+        public Veiculo BuscarVeiculoPorModelo(string modelo)
+        {
+            return _veiculoRepositorio.BuscarVeiculoPorModelo(modelo);
+        }
+
         public List<Veiculo> BuscarVeiculosAtivos()
         {
-            throw new NotImplementedException();
-        }    
+            return _veiculoRepositorio.BuscarVeiculosAtivos();
+        }
+        public Veiculo BuscarVeiculoPeloId(Guid id)
+        {
+            return _veiculoRepositorio.BuscarVeiculoPeloId(id);
+        }
+        public void ExcluirVeiculo(Guid id)
+        {
+            Veiculo veiculo = _veiculoRepositorio.BuscarVeiculoPeloId(id);
+            if (veiculo != null)
+            {
+                veiculo.Ativo = false;
+            }
+        }
     }
 }
