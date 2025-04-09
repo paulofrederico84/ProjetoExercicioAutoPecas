@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoExercicioAutoPecas.Entidades
 {
-    public class Veiculos
+    public class Veiculo
     {
         public Guid Id { get; set; }
         public string Marca { get; set; }

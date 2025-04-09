@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoExercicioAutoPecas.Interfaces
 {
-    internal class IVeiculoService
+    public interface IVeiculoService
     {
         Guid RegistrarVeiculo(Veiculo veiculo);
         Veiculo BuscarVeiculoPorMarca(string marca);

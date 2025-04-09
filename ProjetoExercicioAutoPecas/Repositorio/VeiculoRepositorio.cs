@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoExercicioAutoPecas.Repositorio
 {
-    public class VeiculosRepositorio : IVeiculoService
+    public class VeiculoRepositorio : IVeiculoService
     {
         private List<Veiculo> _veiculos = [];
         public Guid RegistrarVeiculo(Veiculo veiculo)
@@ -57,3 +57,4 @@ namespace ProjetoExercicioAutoPecas.Repositorio
     }
 }
 
+// "(ô\_!_/ô)"
