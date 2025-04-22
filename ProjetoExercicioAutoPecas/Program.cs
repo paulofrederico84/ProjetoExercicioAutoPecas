@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ProjetoExercicioAutoPecas.Serviço;
+using System;
+
+
+namespace ProjetoExercicioAutoPecas
+{
+    class Program
+    {
+        
+        
+            
+        
+    }
+}

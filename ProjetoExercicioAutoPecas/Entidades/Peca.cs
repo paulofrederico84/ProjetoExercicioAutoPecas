@@ -11,6 +11,6 @@ namespace ProjetoExercicioAutoPecas.Entidades
         public string Codigo { get; set; }
         public string Descricao { get; set; }
         public string Fabricante { get; set; }
-        public bool Estoque { get; set; }
+        public string Estoque { get; set; }
     }
 }

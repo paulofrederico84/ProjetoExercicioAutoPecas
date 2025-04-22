@@ -16,6 +16,11 @@ namespace ProjetoExercicioAutoPecas.Serviço
         {
             _veiculoRepositorio = veiculoRepositorio;
         }
+
+        public VeiculoService()
+        {
+        }
+
         public Guid CadastrarVeiculo(Veiculo veiculo)
         {
             return _veiculoRepositorio.RegistrarVeiculo(veiculo);
