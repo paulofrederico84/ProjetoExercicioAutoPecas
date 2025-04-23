@@ -16,7 +16,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             Veiculos = 3,            
             Sair = 4,
         }
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
             bool executar = true;
             var primeiroMenu = PrimeiroMenu.NaoInformado;

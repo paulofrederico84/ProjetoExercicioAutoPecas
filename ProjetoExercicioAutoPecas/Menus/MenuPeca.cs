@@ -128,6 +128,7 @@ namespace ProjetoExercicioAutoPecas.Menus
 
                     case Menu.Sair:
                         {
+                            executar = false;
                             break;
                         }
 
