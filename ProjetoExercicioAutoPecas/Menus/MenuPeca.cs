@@ -101,20 +101,29 @@ namespace ProjetoExercicioAutoPecas.Menus
                     case Menu.ConsultarEstoque:
                         {
                             Console.WriteLine("Digite Estoque para Consulta");
-                            var estoque = Console.ReadLine();
-                            var consultaEstoque = pecaService.ConsultarPorDescricao(estoque);
-                            Console.WriteLine(estoque);
+                            List<Peca> listaEstoque = pecaService.ListarEmEstoque();
+                            foreach (var peca in listaEstoque)
+                            {
+                                Console.WriteLine($"Código: {peca.Codigo}, Descrição: {peca.Descricao}, Fabricante: {peca.Fabricante}, Estoque: {peca.Estoque}");
+                            }
 
                             break;
                         }
-                    //case Menu.Excluir:
-                        //{
-                            //Console.WriteLine("Digite Código para Exclusão");
-                           // var codigo = Console.ReadLine();
-                           // pecaService.ExcluirPeca(codigo);
-                           // break;
-                       // }
+                  case Menu.Excluir:
+                        {
+                            Console.WriteLine("Digite Código para Exclusão");
+                            var codigo = Console.ReadLine();
+                            pecaService.ExcluirPeca(codigo);
+                            break;
+                        }
 
+                    case Menu.VoltarMenuPrincipal:
+                        {
+                            Console.WriteLine("Voltando ao Menu Principal...");
+                            MenuPrincipal menuPrincipal = new MenuPrincipal();
+                            menuPrincipal.Main(args);
+                            break;
+                        }
 
 
                     case Menu.Sair:
