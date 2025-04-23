@@ -12,7 +12,7 @@ namespace ProjetoExercicioAutoPecas.Menus
         {
             NaoInformado = 0,
             Pecas = 1,
-            Clientes = 2,
+            Pessoa = 2,
             Veiculos = 3,            
             Sair = 4,
         }
@@ -36,16 +36,25 @@ namespace ProjetoExercicioAutoPecas.Menus
                 {
                     case PrimeiroMenu.Pecas:
                         {
+                            Console.WriteLine("Abrindo Menu de Peças...");
+                            MenuPeca menuPeca = new MenuPeca();
+                            menuPeca.Main(args);                            
                             break;
                         }
 
-                    case PrimeiroMenu.Clientes:
+                    case PrimeiroMenu.Pessoa:
                         {
+                            Console.WriteLine("Abrindo Menu de Clientes...");
+                            MenuPessoa menuPessoa = new MenuPessoa();
+                            menuPessoa.Main(args);
                             break;
                         }
 
                     case PrimeiroMenu.Veiculos:
                         {
+                            Console.WriteLine("Abrindo Menu de Veiculos...");
+                            MenuVeiculo menuVeiculo = new MenuVeiculo();
+                            menuVeiculo.Main(args);
                             break;
                         }
 

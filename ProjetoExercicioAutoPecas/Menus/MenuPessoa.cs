@@ -31,7 +31,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             Sair = 10,
         }
 
-        static void Main(string[] args)
+        public void Main(string[] args)
          
         {
             bool executar = true;

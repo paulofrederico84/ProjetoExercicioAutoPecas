@@ -22,7 +22,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             Sair = 8,
 
         }
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
             bool executar = true;
             var menu = Menu.NaoInformado;
