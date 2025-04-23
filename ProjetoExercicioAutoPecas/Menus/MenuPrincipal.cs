@@ -60,11 +60,10 @@ namespace ProjetoExercicioAutoPecas.Menus
 
                     case PrimeiroMenu.Sair:
                         {
+                            executar = false;
                             break;
                         }
                 }
-
-
             }
             while (executar);
         }
