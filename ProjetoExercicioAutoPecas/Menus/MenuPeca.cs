@@ -27,6 +27,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             bool executar = true;
             var menu = Menu.NaoInformado;
 
+            int opcao = 0;
             do
             {
                 Console.WriteLine("Qual opção você deseja?");
@@ -40,6 +41,14 @@ namespace ProjetoExercicioAutoPecas.Menus
                 Console.WriteLine("8 - SAIR");
 
                 Console.WriteLine();
+
+                if (!int.TryParse(Console.ReadLine(), out opcao))
+                {
+                    Console.WriteLine("Opção inválida! Pressione qualquer tecla para continuar.");
+                    Console.ReadKey();
+                    continue;
+                }
+
                 menu = (Menu)Convert.ToInt32(Console.ReadLine());
 
                 switch (menu)
