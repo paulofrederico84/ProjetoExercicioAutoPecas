@@ -16,7 +16,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             Veiculos = 3,            
             Sair = 4,
         }
-        public void Main(string[] args)
+        public void Main()
         {
             bool executar = true;
             var primeiroMenu = PrimeiroMenu.NaoInformado;
@@ -38,7 +38,7 @@ namespace ProjetoExercicioAutoPecas.Menus
                         {
                             Console.WriteLine("Abrindo Menu de Peças...");
                             MenuPeca menuPeca = new MenuPeca();
-                            menuPeca.Main(args);                            
+                            menuPeca.Main();                            
                             break;
                         }
 
@@ -46,7 +46,7 @@ namespace ProjetoExercicioAutoPecas.Menus
                         {
                             Console.WriteLine("Abrindo Menu de Clientes...");
                             MenuPessoa menuPessoa = new MenuPessoa();
-                            menuPessoa.Main(args);
+                            menuPessoa.Main();
                             break;
                         }
 
@@ -54,7 +54,7 @@ namespace ProjetoExercicioAutoPecas.Menus
                         {
                             Console.WriteLine("Abrindo Menu de Veiculos...");
                             MenuVeiculo menuVeiculo = new MenuVeiculo();
-                            menuVeiculo.Main(args);
+                            menuVeiculo.Main();
                             break;
                         }
 

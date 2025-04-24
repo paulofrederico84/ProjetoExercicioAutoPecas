@@ -39,7 +39,7 @@ namespace ProjetoExercicioAutoPecas.Repositorio
             List<Peca> pecasEmEstoque = new List<Peca>();
             foreach (Peca peca in _peca)
             {
-                if (peca.Estoque)
+                if (!string.IsNullOrEmpty(peca.Estoque))
                     pecasEmEstoque.Add(peca);
             }
             return pecasEmEstoque;

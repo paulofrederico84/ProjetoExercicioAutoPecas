@@ -31,7 +31,7 @@ namespace ProjetoExercicioAutoPecas.Menus
             Sair = 10,
         }
 
-        public void Main(string[] args)
+        public void Main()
          
         {
             bool executar = true;
@@ -131,7 +131,7 @@ namespace ProjetoExercicioAutoPecas.Menus
                         {
                             Console.WriteLine("Voltando ao Menu Principal...");
                             MenuPrincipal menuPrincipal = new MenuPrincipal();
-                            menuPrincipal.Main(args);
+                            menuPrincipal.Main();
 
                             break;
                         }

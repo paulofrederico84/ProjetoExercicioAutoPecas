@@ -57,5 +57,10 @@ namespace ProjetoExercicioAutoPecas.Serviço
                 veiculo.Ativo = false;
             }
         }
+
+        public Guid RegistrarVeiculo(Veiculo veiculo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
